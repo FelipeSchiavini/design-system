@@ -71,4 +71,9 @@ To change component style with props
 
 ## Deploy on Github
 ##### https://www.npmjs.com/package/@storybook/storybook-deployer
-`npm i @storybook/storybook-deployer --save-dev`
+1. `npm i @storybook/storybook-deployer --save-dev`
+2. create git repository
+3. insert on package.json: `"deploy-storybook": "storybook-to-ghpages"`
+4. run `npm run build-storybook`
+5. insert storybook-static on .gitignore
+6. on `maincjs`
