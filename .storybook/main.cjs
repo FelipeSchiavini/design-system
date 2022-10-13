@@ -14,10 +14,5 @@ module.exports = {
   },
   "features": {
     "storyStoreV7": true
-  },
-  viteFinal: {
-    config: {
-      configType
-    }
   }
 }
