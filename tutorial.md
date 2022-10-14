@@ -76,4 +76,10 @@ To change component style with props
 3. insert on package.json: `"deploy-storybook": "storybook-to-ghpages"`
 4. run `npm run build-storybook`
 5. insert storybook-static on .gitignore
-6. on `maincjs`
+6. on `maincjs` insert:
+```
+  viteFinal: (config, { configType }) => {
+    if (configType === 'PRODUCTION') {
+      config.base = '/repository-name/'
+    }
+```
