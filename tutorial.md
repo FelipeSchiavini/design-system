@@ -69,6 +69,28 @@ To change component style with props
   }
 ```
 
+### Storybook interactions (test)
+https://storybook.js.org/addons/@storybook/addon-interactions
+`npm install @storybook/testing-library @storybook/jest @storybook/addon-interactions @storybook/test-runner --save-dev`
+insert addon `'@storybook/addon-interactions'`on main.cjs and interactionsDebugger: true,
+
+### Storybook Addons
+https://mswjs.io/docs/getting-started/install
+https://github.com/mswjs/msw-storybook-addon
+`npm i msw msw-storybook-addon -D`
+`npx msw init public/`
+insert on `maincjs`  "staticDirs": ["../public"],
+insert on preview.cjs
+```
+import { initialize, mswDecorator } from 'msw-storybook-addon';
+
+// Initialize MSW
+initialize();
+
+// Provide the MSW addon decorator globally
+export const decorators = [mswDecorator];
+```
+
 ## Deploy on Github
 ##### https://www.npmjs.com/package/@storybook/storybook-deployer
 1. `npm i @storybook/storybook-deployer --save-dev`
